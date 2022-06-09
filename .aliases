@@ -1,0 +1,83 @@
+#!/bin/bash
+
+function ksel {
+  kubectl get ${1:-po} --all-namespaces | fzf --header-lines=1 --query "${2}" | awk '{ print $2,"--namespace " $1 }'
+}
+
+function kfinalize {
+  [[ -z "$1" ]] && { echo "Parameter 1 is empty" ; exit 1; }
+  [[ "$1" == "kube-system" ]] && { echo "Parameter 1 is invalid" ; exit 1; }
+
+  namespace=${1} && kubectl get ns $namespace -o json | jq '.spec.finalizers = []' | kubectl replace --raw "/api/v1/namespaces/$namespace/finalize" -f -
+}
+
+alias cd..='cd .. '
+
+# alias ls='ls -ACF'
+# alias ll='ls -alhF'
+
+alias ls='exa -aD'
+alias ll='exa -a1l'
+
+alias mv='mv -v'
+alias mkdir='mkdir -pv'
+
+alias wget='wget -c'
+
+alias top='btop'
+alias htop='btop'
+alias dig='dog'
+
+alias tg='terragrunt'
+alias tf='terraform'
+alias python='python3'
+alias py='python'
+
+# rewrites
+alias cat='bat'
+alias diff='git diff '
+
+# git
+alias gut='git'
+alias gst='git status'
+alias gs='git status'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias glo='git log --oneline'
+alias gc='git commit -m '
+alias gco='git checkout '
+
+alias zshconfig="code ~/.zshrc"
+alias ohmyzsh="code ~/.oh-my-zsh"
+
+# Docker
+alias rm-container="docker rm -fv $(docker ps -a -q)"
+alias rm-images="docker rmi $(docker images -q)"
+
+# bin shortcuts
+alias bal='ballerina '
+alias dc='docker-compose '
+alias k='kubectl '
+
+alias show-files='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hide-files='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+
+alias bash_profile='code ~/.profile'
+alias bash_aliases='code ~/.aliases'
+
+alias cleardns='dscacheutil -flushcache && sudo killall -HUP mDNSResponder'
+alias localip="ifconfig -a | grep -o 'inet\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)'"
+
+# GCloud CLI
+alias gcurrent="gcloud config get-value project"
+
+# kubectl
+alias k-clean="kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains(\"Terminated\", \"NodeShutdown\")) | \"kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)\"' | xargs -n 1 bash -c"
+alias k-del-evicted="kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains(\"Evicted\")) | \"kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)\"' | xargs -n 1 bash -c"
+alias k-del-crashed="kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains(\"CrashLoopBackOff\")) | \"kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)\"' | xargs -n 1 bash -c"
+alias k-del-affinity="kubectl get pods --all-namespaces -o json | jq '.items[] | select(.status.reason!=null) | select(.status.reason | contains(\"NodeAffinity\")) | \"kubectl delete pods \(.metadata.name) -n \(.metadata.namespace)\"' | xargs -n 1 bash -c"
+alias k-images="kubectl get pods -A -o=custom-columns=\"NAME:{.metadata.name},IMAGE:{.spec.containers[*].image}\""
+
+alias kother="unset KUBECONFIG"
+alias kprod="export KUBECONFIG=~/.kube/config-production"
+alias kstaging="export KUBECONFIG=~/.kube/config-staging"
