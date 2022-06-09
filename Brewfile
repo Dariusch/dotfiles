@@ -77,6 +77,7 @@ brew "zlib"
 # keys
 brew "age"
 brew "sops"
+brew "gpg"
 
 # cloud stuff
 brew "awscli"

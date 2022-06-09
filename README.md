@@ -46,7 +46,9 @@ yadm clone --bootstrap git@github.com/Dariusch/dotfiles.git
 brew bundle
 ```
 
-### Additional steps
+## Manual steps
+
+### zsh stuff
 
 You might need to re-run som post-installation scripts as brew does not execute them:
 
@@ -56,6 +58,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-completions
 git clone https://github.com/kubermatic/fubectl.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fubectl
+```
 
-# more might be following..
+### ruby
+
+```shell
+command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
+command curl -sSL https://rvm.io/pkuczynski.asc | gpg --import -
+curl -sSL https://get.rvm.io | bash -s stable
+curl -sSL https://get.rvm.io | bash -s stable --rails
 ```
