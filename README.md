@@ -1,5 +1,7 @@
 # My Dotfiles
 
+![dotfiles](https://dotfiles.github.io/images/dotfiles-logo.png)
+
 These are my dotfiles which I use every day.
 
 The dotfiles are managed by [yadm](https://github.com/TheLocehiliosan/yadm), a git based dotfile manager.
