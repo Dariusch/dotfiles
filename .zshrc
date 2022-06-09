@@ -86,6 +86,7 @@ plugins=(
   git
   fubectl
   zsh-interactive-cd
+  zsh-completions
   zsh-autosuggestions
   zsh-syntax-highlighting
   )
@@ -131,6 +132,9 @@ source "$(brew --prefix)/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.
 
 source ~/.aliases
 source ~/.profile
+
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 

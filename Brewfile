@@ -20,7 +20,6 @@ tap "weaveworks/tap"
 
 # ZSH stuff
 brew "zsh-autosuggestions"
-brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 brew "romkatv/powerlevel10k/powerlevel10k"
 
