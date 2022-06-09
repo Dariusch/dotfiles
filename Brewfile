@@ -117,12 +117,13 @@ brew "protobuf"
 brew "bufbuild/buf/buf"
 
 # Casks
-cask "aldente"      # macOS tool to limit maximum charging percentage
-cask "beardedspice" # allows you to control web based media players
-cask "clipy"        # clipboard manager
-cask "dozer"        # Hide menu bar icons on macOS
-cask "meetingbar"   # Your next meeting in the macOS menu bar
-cask "rectangle"    # Move and resize windows in macOS using keyboard shortcuts
+cask "beardedspice"     # allows you to control web based media players
+cask "clipy"            # clipboard manager
+cask "dozer"            # Hide menu bar icons on macOS
+cask "grammarly-dektop" # Gramamrly for mac
+cask "meetingbar"       # Your next meeting in the macOS menu bar
+cask "rectangle"        # Move and resize windows in macOS using keyboard shortcuts
+cask "skype"
 cask "slack"
 cask "spotify"
 cask "visual-studio-code"
