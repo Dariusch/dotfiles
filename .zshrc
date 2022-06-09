@@ -1,3 +1,5 @@
+source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -134,6 +136,5 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 autoload -U compinit; compinit
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/fubectl.source ] && source ~/fubectl.source
+

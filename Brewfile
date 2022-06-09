@@ -22,6 +22,7 @@ tap "weaveworks/tap"
 brew "zsh-autosuggestions"
 brew "zsh-completions"
 brew "zsh-syntax-highlighting"
+brew "romkatv/powerlevel10k/powerlevel10k"
 
 # git
 brew "git"
@@ -46,7 +47,7 @@ brew "yarn"
 brew "hugo"
 
 # cli stuff
-brwe "dog"
+brew "dog"
 brew "fzf"
 brew "asdf"
 brew "bash"

@@ -12,13 +12,13 @@ eval $(thefuck --alias)
 
 # Golang
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
+export GOROOT="$(brew --prefix golang)/libexec"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$(go env GOPATH)/bin
 
 # java
-export PATH="/usr/local/opt/openjdk@18/bin:$PATH"
+export PATH="$(brew --prefix openjdk@11)/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
 
 # node/nvm
