@@ -8,7 +8,7 @@ The dotfiles are managed by [yadm](https://github.com/TheLocehiliosan/yadm), a g
 
 ## Prerequisites
 
-## Homebrew
+### Homebrew
 
 First we will need [Homebrew](https://brew.sh/), a package manager for macOS.
 
@@ -18,7 +18,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
-### yadm
+#### yadm
 
 With homebrew installed we can install yadm:
 
@@ -26,7 +26,7 @@ With homebrew installed we can install yadm:
 brew install yadm
 ```
 
-### GitHub access
+#### GitHub access
 
 To clone the repository via ssh we need to generate a [ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
@@ -59,15 +59,4 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/kubermatic/fubectl.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fubectl
 
 # more might be following..
-```
-
-## yadm cheatsheet
-
-```shell
-# Add files/changes
-yadm add <important file>
-yadm commit
-
-# push changes to remote
-yadm push
 ```
