@@ -10,6 +10,9 @@ export KUBE_EDITOR="nano"
 [ -f ~/.aliases ] && source ~/.aliases
 eval $(thefuck --alias)
 
+# gcloud opt-in
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
 # Golang
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
