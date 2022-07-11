@@ -15,13 +15,14 @@ tap "fluxcd/tap"
 tap "gabrie30/utils"
 tap "komiserio/komiser"
 tap "norwoodj/tap"
+tap "romkatv/powerlevel10k"
 tap "snyk/tap"
 tap "weaveworks/tap"
 
 # ZSH stuff
 brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
-brew "romkatv/powerlevel10k/powerlevel10k"
+brew "powerlevel10k"
 
 # git
 brew "git"
@@ -35,7 +36,6 @@ brew "mas"
 
 # langauge and tools
 brew "ballerina"
-brew "python@3.9"
 brew "go"
 brew "node"
 brew "nvm"

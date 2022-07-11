@@ -41,7 +41,7 @@ gh auth login
 ## Install your dotfiles
 
 ```shell
-yadm clone --bootstrap git@github.com/Dariusch/dotfiles.git
+yadm clone --bootstrap git@github.com:Dariusch/dotfiles.git
 
 brew bundle
 ```
