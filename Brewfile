@@ -15,14 +15,8 @@ tap "fluxcd/tap"
 tap "gabrie30/utils"
 tap "komiserio/komiser"
 tap "norwoodj/tap"
-tap "romkatv/powerlevel10k"
 tap "snyk/tap"
 tap "weaveworks/tap"
-
-# ZSH stuff
-brew "zsh-autosuggestions"
-brew "zsh-syntax-highlighting"
-brew "powerlevel10k"
 
 # git
 brew "git"
