@@ -47,6 +47,7 @@ brew "bash"
 brew "bat"  # colorized cat
 # brew "htop"
 brew "btop" # better top/htop
+brew "dust" # better du
 brew "exa"  # better ls
 brew "httpie"
 brew "jid"

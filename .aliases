@@ -36,7 +36,9 @@ alias py='python'
 # rewrites
 alias cat='bat'
 alias diff='git diff '
+alias du='dust '
 alias watch='viddy '
+
 
 # git
 alias gut='git'
