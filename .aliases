@@ -50,6 +50,8 @@ alias gco='git checkout '
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
+alias rmt="cd $GOPATH/src/github.com/retailmediatools"
+
 # Docker
 alias rm-container="docker rm -fv $(docker ps -a -q)"
 alias rm-images="docker rmi $(docker images -q)"
