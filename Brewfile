@@ -62,6 +62,7 @@ brew "sl"         # sl train
 brew "step"
 brew "thefuck"
 brew "vault"
+brew "viddy"      # modern watch
 brew "watch"
 brew "wget"
 brew "yamllint"
