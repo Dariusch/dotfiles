@@ -37,3 +37,6 @@ export PATH=$HOME/Library/Python/3.9/bin:$PATH
 export PATH=$PATH:/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+# secrets
+export SOPS_AGE_KEY_FILE="$HOME/.sops/age.txt"

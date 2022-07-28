@@ -24,7 +24,6 @@ alias mkdir='mkdir -pv'
 
 alias wget='wget -c'
 
-alias top='btop'
 alias htop='btop'
 alias dig='dog'
 
@@ -35,10 +34,9 @@ alias py='python'
 
 # rewrites
 alias cat='bat'
-alias diff='git diff '
+alias diff='delta '
 alias du='dust '
 alias watch='viddy '
-
 
 # git
 alias gut='git'
@@ -53,7 +51,7 @@ alias gco='git checkout '
 alias zshconfig="code ~/.zshrc"
 alias ohmyzsh="code ~/.oh-my-zsh"
 
-alias rmt="cd $GOPATH/src/github.com/retailmediatools"
+alias rmt="cd ~/go/src/github.com/retailmediatools"
 
 # Docker
 alias rm-container="docker rm -fv $(docker ps -a -q)"

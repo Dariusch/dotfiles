@@ -141,4 +141,3 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 autoload -U compinit; compinit
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
