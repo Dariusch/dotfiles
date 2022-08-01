@@ -16,6 +16,8 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # Golang
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
+export GOPRIVATE="github.com/retailmediatools/*"
+
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 export PATH=$PATH:$(go env GOPATH)/bin
